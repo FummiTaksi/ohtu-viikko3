@@ -7,7 +7,6 @@ public class Main {
         Multiplier kolme = new Multiplier(1);
         System.out.println("anna luku ");
         int luku = scanner.nextInt();
-
         System.out.println("luku kertaa kolme on " + kolme.multipliedBy(luku));
 
     
