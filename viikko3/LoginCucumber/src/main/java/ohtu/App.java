@@ -23,30 +23,7 @@ public class App {
         return userPwd;
     }
 
-    public boolean passwordIsLegit(String password) {
-      if (password.length() >= 8) {
-        for (int i = 0; i < password.length(); i++) {
-          char letter = password.charAt(i);
-          if (!Character.isLetter(letter)) {
-            return true;
-          }
-        }
-      }
-      return false;
-    }
 
-    public boolean usernameIsLegit(String username) {
-      if (username.length() >= 3) {
-        for (int i = 0; i < username.length(); i++) {
-          char letter = username.charAt(i);
-          if (!Character.isLetter(letter)) {
-            return false;
-          }
-        }
-        return true;
-      }
-      return false;
-    }
 
     public void run() {
 
@@ -59,13 +36,9 @@ public class App {
 
             if (command.equals("new")) {
                 String[] usernameAndPassword = ask();
-                String username = usernameAndPassword[0];
-                String password = usernameAndPassword[1];
-                if (passwordIsLegit(password) && usernameIsLegit(username)) {
-                  if (auth.createUser(username, password)) {
+                  if (auth.createUser(usernameAndPassword[0],usernameAndPassword[1])) {
                       io.print("new user registered");
-                  }
-                }
+                  }              
                 else {
                     io.print("new user not registered");
                 }

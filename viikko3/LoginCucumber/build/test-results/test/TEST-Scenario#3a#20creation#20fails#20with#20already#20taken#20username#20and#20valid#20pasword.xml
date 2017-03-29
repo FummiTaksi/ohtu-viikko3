@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: creation fails with already taken username and valid pasword" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-03-29T10:31:02" hostname="1BQQFZW.kumpula.dhcp.hupnet.helsinki.fi" time="0.003">
+  <properties/>
+  <testcase name="Given command new is selected" classname="Scenario: creation fails with already taken username and valid pasword" time="0.0"/>
+  <testcase name="Given user &quot;pekka&quot; with password &quot;salainen1&quot; is created" classname="Scenario: creation fails with already taken username and valid pasword" time="0.0"/>
+  <testcase name="And command new is selected" classname="Scenario: creation fails with already taken username and valid pasword" time="0.001"/>
+  <testcase name="And username &quot;pekka&quot; and password &quot;salainen1&quot; are entered" classname="Scenario: creation fails with already taken username and valid pasword" time="0.0"/>
+  <testcase name="Then system will respond with &quot;new user not registered&quot;" classname="Scenario: creation fails with already taken username and valid pasword" time="0.001"/>
+  <testcase name="classMethod" classname="Scenario: creation fails with already taken username and valid pasword" time="0.004"/>
+  <system-out><![CDATA[
+  Scenario: creation fails with too short username and valid password ?[90m# ohtu/new_user.feature:19?[0m
+    ?[32mGiven ?[0m?[32mcommand new is selected?[0m                                     ?[90m# Stepdefs.command_new_is_selected()?[0m
+    ?[32mWhen ?[0m?[32musername "?[0m?[32m?[1mok?[0m?[32m" and password "?[0m?[32m?[1mfullstack!?[0m?[32m" are entered?[0m          ?[90m# Stepdefs.a_username_and_password_are_entered(String,String)?[0m
+    ?[32mThen ?[0m?[32msystem will respond with "?[0m?[32m?[1mnew user not registered?[0m?[32m"?[0m           ?[90m# Stepdefs.system_will_respond_with(String)?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

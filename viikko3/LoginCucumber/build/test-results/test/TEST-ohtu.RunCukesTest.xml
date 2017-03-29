@@ -9,14 +9,15 @@
     ?[32mThen ?[0m?[32msystem will respond with "?[0m?[32m?[1mwrong username or password?[0m?[32m"?[0m ?[90m# Stepdefs.system_will_respond_with(String)?[0m
 Feature: A new user account can be created if a proper unused username and password are given
 
-  Scenario: creation fails with too short username and valid password ?[90m# ohtu/new_user.feature:19?[0m
-    ?[32mGiven ?[0m?[32mcommand new is selected?[0m                                     ?[90m# Stepdefs.command_new_is_selected()?[0m
-    ?[32mWhen ?[0m?[32musername "?[0m?[32m?[1mok?[0m?[32m" and password "?[0m?[32m?[1mfullstack!?[0m?[32m" are entered?[0m          ?[90m# Stepdefs.a_username_and_password_are_entered(String,String)?[0m
-    ?[32mThen ?[0m?[32msystem will respond with "?[0m?[32m?[1mnew user not registered?[0m?[32m"?[0m           ?[90m# Stepdefs.system_will_respond_with(String)?[0m
+  Scenario: can not login with account that is not succesfully created ?[90m# ohtu/new_user.feature:39?[0m
+    ?[32mGiven ?[0m?[32muser "?[0m?[32m?[1maa?[0m?[32m" with password "?[0m?[32m?[1maa?[0m?[32m" is created?[0m                      ?[90m# Stepdefs.user_with_password_is_created(String,String)?[0m
+    ?[32mAnd ?[0m?[32mcommand login is selected?[0m                                      ?[90m# Stepdefs.command_login_selected()?[0m
+    ?[32mWhen ?[0m?[32musername "?[0m?[32m?[1maa?[0m?[32m" and password "?[0m?[32m?[1maa?[0m?[32m" are entered?[0m                   ?[90m# Stepdefs.a_username_and_password_are_entered(String,String)?[0m
+    ?[32mThen ?[0m?[32msystem will respond with "?[0m?[32m?[1mwrong username or password?[0m?[32m"?[0m         ?[90m# Stepdefs.system_will_respond_with(String)?[0m
 
-7 Scenarios (?[32m7 passed?[0m)
-21 Steps (?[32m21 passed?[0m)
-0m0,089s
+10 Scenarios (?[32m10 passed?[0m)
+34 Steps (?[32m34 passed?[0m)
+0m0,096s
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

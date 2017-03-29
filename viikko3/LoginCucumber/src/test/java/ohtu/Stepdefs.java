@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 import ohtu.io.*;
 import ohtu.data_access.*;
 import ohtu.services.*;
+import ohtu.domain.*;
 
 public class Stepdefs {
     App app;
@@ -41,5 +42,15 @@ public class Stepdefs {
     public void command_new_is_selected() throws Throwable {
     // Write code here that turns the phrase above into concrete actions
     inputLines.add("new");
+}
+    @Given("^user \"([^\"]*)\" with password \"([^\"]*)\" is created$")
+    public void user_with_password_is_created(String username, String password) throws Throwable {
+// Write code here that turns the phrase above into concrete actions
+    inputLines.add("new");
+    inputLines.add(username);
+    inputLines.add(password);
+    io = new StubIO(inputLines);
+    app = new App(io, auth);
+    app.run();
 }
 }

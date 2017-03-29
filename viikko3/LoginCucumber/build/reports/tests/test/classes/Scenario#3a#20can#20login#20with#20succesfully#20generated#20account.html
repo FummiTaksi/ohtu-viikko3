@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Class Scenario: creation fails with correct username and too short password</title>
+<title>Test results - Class Scenario: can login with succesfully generated account</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Class Scenario: creation fails with correct username and too short password</h1>
+<h1>Class Scenario: can login with succesfully generated account</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/default-package.html">default-package</a> &gt; Scenario: creation fails with correct username and too short password</div>
+<a href="../packages/default-package.html">default-package</a> &gt; Scenario: can login with succesfully generated account</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">4</div>
+<div class="counter">5</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.004s</div>
+<div class="counter">0.006s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,23 +78,28 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Given command new is selected</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">Then system will respond with &quot;new user not registered&quot;</td>
+<td class="success">And command login is selected</td>
 <td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">When username &quot;olomuoto&quot; and password &quot;o&quot; are entered</td>
+<td class="success">Given user &quot;eero&quot; with password &quot;salainen1&quot; is created</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Then system will respond with &quot;logged in&quot;</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">When username &quot;eero&quot; and password &quot;salainen1&quot; are entered</td>
 <td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">classMethod</td>
-<td>0.003s</td>
+<td>0.005s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -103,10 +108,12 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-  Scenario: user can register with proper unuserd username and password ?[90m# ohtu/new_user.feature:3?[0m
-    ?[32mGiven ?[0m?[32mcommand new is selected?[0m                                       ?[90m# Stepdefs.command_new_is_selected()?[0m
-    ?[32mWhen ?[0m?[32musername &quot;?[0m?[32m?[1muusi?[0m?[32m&quot; and password &quot;?[0m?[32m?[1msalasana1!?[0m?[32m&quot; are entered?[0m          ?[90m# Stepdefs.a_username_and_password_are_entered(String,String)?[0m
-    ?[32mThen ?[0m?[32msystem will respond with &quot;?[0m?[32m?[1mnew user registered?[0m?[32m&quot;?[0m                 ?[90m# Stepdefs.system_will_respond_with(String)?[0m
+  Scenario: creation fails with already taken username and valid pasword ?[90m# ohtu/new_user.feature:26?[0m
+    ?[32mGiven ?[0m?[32mcommand new is selected?[0m                                        ?[90m# Stepdefs.command_new_is_selected()?[0m
+    ?[32mGiven ?[0m?[32muser &quot;?[0m?[32m?[1mpekka?[0m?[32m&quot; with password &quot;?[0m?[32m?[1msalainen1?[0m?[32m&quot; is created?[0m              ?[90m# Stepdefs.user_with_password_is_created(String,String)?[0m
+    ?[32mAnd ?[0m?[32mcommand new is selected?[0m                                          ?[90m# Stepdefs.command_new_is_selected()?[0m
+    ?[32mAnd ?[0m?[32musername &quot;?[0m?[32m?[1mpekka?[0m?[32m&quot; and password &quot;?[0m?[32m?[1msalainen1?[0m?[32m&quot; are entered?[0m            ?[90m# Stepdefs.a_username_and_password_are_entered(String,String)?[0m
+    ?[32mThen ?[0m?[32msystem will respond with &quot;?[0m?[32m?[1mnew user not registered?[0m?[32m&quot;?[0m              ?[90m# Stepdefs.system_will_respond_with(String)?[0m
 </pre>
 </span>
 </div>
