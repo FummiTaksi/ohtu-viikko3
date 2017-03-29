@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Scenario: can not login with account that is not succesfully created" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-03-29T10:57:55" hostname="1BQQFZW.kumpula.dhcp.hupnet.helsinki.fi" time="0.002">
+<testsuite name="Scenario: can not login with account that is not succesfully created" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-03-29T11:08:28" hostname="1BQQFZW.kumpula.dhcp.hupnet.helsinki.fi" time="0.003">
   <properties/>
-  <testcase name="Given user &quot;aa&quot; with password &quot;aa&quot; is created" classname="Scenario: can not login with account that is not succesfully created" time="0.0"/>
+  <testcase name="Given user &quot;aa&quot; with password &quot;aa&quot; is created" classname="Scenario: can not login with account that is not succesfully created" time="0.001"/>
   <testcase name="And command login is selected" classname="Scenario: can not login with account that is not succesfully created" time="0.0"/>
   <testcase name="When username &quot;aa&quot; and password &quot;aa&quot; are entered" classname="Scenario: can not login with account that is not succesfully created" time="0.0"/>
   <testcase name="Then system will respond with &quot;wrong username or password&quot;" classname="Scenario: can not login with account that is not succesfully created" time="0.0"/>
-  <testcase name="classMethod" classname="Scenario: can not login with account that is not succesfully created" time="0.003"/>
+  <testcase name="classMethod" classname="Scenario: can not login with account that is not succesfully created" time="0.007"/>
   <system-out><![CDATA[
   Scenario: can login with succesfully generated account      ?[90m# ohtu/new_user.feature:33?[0m
     ?[32mGiven ?[0m?[32muser "?[0m?[32m?[1meero?[0m?[32m" with password "?[0m?[32m?[1msalainen1?[0m?[32m" is created?[0m    ?[90m# Stepdefs.user_with_password_is_created(String,String)?[0m
