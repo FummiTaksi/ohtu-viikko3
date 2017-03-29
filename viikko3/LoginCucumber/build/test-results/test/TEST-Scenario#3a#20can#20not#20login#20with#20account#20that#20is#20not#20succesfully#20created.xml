@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Scenario: can not login with account that is not succesfully created" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-03-29T10:31:02" hostname="1BQQFZW.kumpula.dhcp.hupnet.helsinki.fi" time="0.002">
+<testsuite name="Scenario: can not login with account that is not succesfully created" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-03-29T10:57:55" hostname="1BQQFZW.kumpula.dhcp.hupnet.helsinki.fi" time="0.002">
   <properties/>
-  <testcase name="Given user &quot;aa&quot; with password &quot;aa&quot; is created" classname="Scenario: can not login with account that is not succesfully created" time="0.001"/>
+  <testcase name="Given user &quot;aa&quot; with password &quot;aa&quot; is created" classname="Scenario: can not login with account that is not succesfully created" time="0.0"/>
   <testcase name="And command login is selected" classname="Scenario: can not login with account that is not succesfully created" time="0.0"/>
   <testcase name="When username &quot;aa&quot; and password &quot;aa&quot; are entered" classname="Scenario: can not login with account that is not succesfully created" time="0.0"/>
   <testcase name="Then system will respond with &quot;wrong username or password&quot;" classname="Scenario: can not login with account that is not succesfully created" time="0.0"/>

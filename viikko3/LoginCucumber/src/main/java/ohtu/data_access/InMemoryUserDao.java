@@ -3,6 +3,8 @@ package ohtu.data_access;
 import ohtu.domain.User;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Component;
+
 
 public class InMemoryUserDao implements UserDao {
 
@@ -11,7 +13,7 @@ public class InMemoryUserDao implements UserDao {
     public InMemoryUserDao() {
         users = new ArrayList<User>();
         users.add(new User("pekka", "akkep"));
-    }        
+    }
 
     @Override
     public List<User> listAll() {

@@ -6,6 +6,9 @@ import ohtu.io.ConsoleIO;
 import ohtu.io.IO;
 import ohtu.services.AuthenticationService;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
 public class App {
 
     private IO io;
@@ -38,7 +41,7 @@ public class App {
                 String[] usernameAndPassword = ask();
                   if (auth.createUser(usernameAndPassword[0],usernameAndPassword[1])) {
                       io.print("new user registered");
-                  }              
+                  }
                 else {
                     io.print("new user not registered");
                 }
@@ -56,10 +59,9 @@ public class App {
     }
 
     public static void main(String[] args) {
-        UserDao dao = new InMemoryUserDao();
-        IO io = new ConsoleIO();
-        AuthenticationService auth = new AuthenticationService(dao);
-        new App(io, auth).run();
+        ApplicationContext ctx = new FileSystemXmlApplicationContext("src/main/resources/spring-context.xml");
+        App application = ctx.getBean(App.class);
+        application.run();
     }
 
 
